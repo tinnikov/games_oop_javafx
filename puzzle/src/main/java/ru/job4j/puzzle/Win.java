@@ -2,7 +2,7 @@ package ru.job4j.puzzle;
 
 public class Win {
     public static boolean check(int[][] board) {
-         return isWin(board);
+        return isWin(board);
     }
     public static boolean monoHorizontal(int[][] board, int row) {
 
