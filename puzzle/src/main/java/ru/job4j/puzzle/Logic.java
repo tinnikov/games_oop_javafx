@@ -3,6 +3,7 @@ package ru.job4j.puzzle;
 import ru.job4j.puzzle.firuges.Cell;
 import ru.job4j.puzzle.firuges.Figure;
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class Logic {
     private final int size;
@@ -43,9 +44,7 @@ public class Logic {
     }
 
     public void clean() {
-        for (int position = 0; position != figures.length; position++) {
-            figures[position] = null;
-        }
+        IntStream.range(0, figures.length).forEach(position -> figures[position] = null);
         index = 0;
     }
 
